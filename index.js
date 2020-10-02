@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 const port = 4200;
-// const pass = 'jhghDGHQOIUmvVJG34  / emaOwner';
+
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -61,7 +61,9 @@ client.connect(err => {
 });
 
 
-
+app.get('/', (req, res) => {
+    res.send("welcome to ema john")
+})
 
 
 
